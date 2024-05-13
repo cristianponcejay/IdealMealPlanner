@@ -1,0 +1,806 @@
+﻿/* Importing Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Popins:wght@100;300;400;500;600&display=swap");
+
+/* Root Variables */
+
+:root {
+    --main-color: #4cff00;
+    /* Main color variable */
+    --primary: grey;
+    /* Primary color variable */
+    --black: #000000;
+    /* Black color variable */
+    --white: #fff;
+    /* White color variable */
+    --bg: #f2f2f2;
+    /* Background color variable */
+    --light-black: #666;
+    /* Light black color variable */
+}
+
+
+/* Global Reset */
+
+* {
+    font-family: popins, sans-serif;
+    /* Default font and fallback */
+    margin: 0;
+    /* Reset margins */
+    padding: 0;
+    /* Reset padding */
+    box-sizing: border-box;
+    /* Box model set to border-box */
+    outline: none;
+    /* Remove outline on focus */
+    border: none;
+    /* Reset border */
+    text-decoration: none;
+    /* Remove text decoration */
+    text-transform: capitalize;
+    /* Capitalize text */
+    transition: .2s linear;
+    /* Default transition */
+}
+
+
+/* HTML Styles */
+
+html {
+    font-size: 62.5%;
+    /* Base font size */
+    overflow-x: hidden;
+    /* Hide horizontal overflow */
+    scroll-behavior: smooth;
+    /* Smooth scrolling */
+    scroll-padding-top: 6rem;
+    /* Padding top for scroll */
+}
+
+
+/* Custom Scrollbar Styles */
+
+html::-webkit-scrollbar {
+    width: 1rem;
+    /* Width of the scrollbar */
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--white);
+    /* Background color of the scrollbar track */
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    /* Background color of the scrollbar thumb */
+}
+
+
+/* Section Styles */
+
+section {
+    padding: 3rem 9%;
+    /* Padding for sections */
+}
+
+
+/* Heading Styles */
+
+.heading {
+    text-align: center;
+    /* Center align heading */
+    color: var(--main-color);
+    /* Main color for heading */
+    text-transform: uppercase;
+    /* Uppercase text */
+    margin-bottom: 4rem;
+    /* Bottom margin for heading */
+    margin-top: 2rem;
+    /* Top margin for heading */
+    font-size: 4rem;
+    /* Font size for heading */
+}
+
+
+/* Button Styles */
+
+.btn {
+    display: inline-block;
+    /* Display as inline block */
+    margin-top: 1rem;
+    /* Top margin for button */
+    padding: 1rem 3rem;
+    /* Padding for button */
+    border: .1rem solid var(--main-color);
+    /* Border style for button */
+    border-radius: .5rem;
+    /* Border radius for button */
+    cursor: pointer;
+    /* Cursor style */
+    font-size: 1.7rem;
+    /* Font size for button */
+    color: var(--main-color);
+    /* Text color for button */
+}
+
+.btn:hover {
+    background: var(--main-color);
+    /* Background color on hover */
+    color: var(--white);
+    /* Text color on hover */
+}
+
+
+/* Header Styles */
+
+.header {
+    position: fixed;
+    /* Fixed position */
+    top: 0;
+    /* Align to top */
+    left: 0;
+    /* Align to left */
+    right: 0;
+    /* Align to right */
+    z-index: 1000;
+    /* Z-index */
+    display: flex;
+    /* Flex display */
+    align-items: baseline;
+    /* Align baseline */
+    justify-content: space-between;
+    /* Space between items */
+    padding: 2rem 9%;
+    /* Padding for header */
+    background: var(--primary);
+    /* Background color for header */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    /* Box shadow */
+}
+
+.header .logo {
+    font-size: 2.2rem;
+    /* Font size for logo */
+    font-weight: bolder;
+    /* Font weight for logo */
+    color: var(--main-color);
+    /* Color for logo */
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    /* Font size for navbar links */
+    margin-left: 2rem;
+    /* Left margin for navbar links */
+    color: var(--black);
+    /* Text color for navbar links */
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    /* Text color on hover for navbar links */
+}
+
+#menu {
+    font-size: 2.5rem;
+    /* Font size for menu icon */
+    cursor: pointer;
+    /* Cursor style for menu icon */
+    color: var(--main-color);
+    /* Color for menu icon */
+    display: none;
+    /* Initially hidden */
+}
+
+
+/* Home Section Styles */
+
+.home {
+    min-height: 100vh;
+    /* Minimum height for home section */
+    display: flex;
+    /* Flex display */
+    align-items: center;
+    /* Align items */
+    justify-content: center;
+    /* Justify content */
+    background: url(images/mealPlannerBackground.jpg)no-repeat;
+    /* Background image */
+    background-size: cover;
+    /* Background size */
+    background-attachment: fixed;
+    /* Background attachment */
+}
+
+.home .content {
+    max-width: 60rem;
+    /* Maximum width for content */
+    text-align: center;
+    /* Center align content */
+}
+
+.home .content h3 {
+    font-size: 5rem;
+    /* Font size for heading */
+    text-transform: uppercase;
+    /* Uppercase text */
+    color: var(--white);
+    /* Text color for heading */
+    padding-bottom: 3.5rem;
+    /* Bottom padding for heading */
+}
+
+
+/* About Section Styles */
+
+.about .row {
+    display: flex;
+    /* Flex display */
+    flex-wrap: wrap;
+    /* Wrap flex items */
+    align-items: center;
+    /* Align items */
+    gap: 2rem;
+    /* Gap between items */
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+    /* Flex settings */
+}
+
+.about .row .content h3 {
+    font-size: 3.5rem;
+    /* Font size for heading */
+    color: var(--black);
+    /* Text color for heading */
+    text-transform: uppercase;
+    /* Uppercase text */
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    /* Font size for paragraph */
+    color: var(--light-black);
+    /* Text color for paragraph */
+    padding: 2rem 0;
+    /* Padding for paragraph */
+    line-height: 2;
+    /* Line height for paragraph */
+}
+
+.about .row .image {
+    flex: 1 1 40rem;
+    /* Flex settings */
+}
+
+.about .row .image img {
+    width: 100%;
+    /* Image width */
+}
+
+
+/* Motivation Section Styles */
+
+.motivation {
+    background: var(--bg);
+    /* Background color for services section */
+}
+
+
+/* Increase font size and line height for better readability */
+
+.motivation .content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* Increase image size */
+
+.motivation .box-container .box .icon img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Add margin between images and text */
+
+.motivation .box-container .box {
+    margin-bottom: 30px;
+}
+
+
+/* Center align the content */
+
+.motivation .content {
+    text-align: center;
+}
+
+
+/* Add some padding around the content */
+
+.motivation .content {
+    padding: 0 20px;
+}
+
+.motivation .box-container {
+    display: grid;
+    /* Grid display */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    /* Grid columns */
+    gap: 2rem;
+    /* Gap between items */
+    margin-top: 8rem;
+    /* Top margin for box container */
+}
+
+.motivation .box-container .box {
+    text-align: center;
+    /* Center align text */
+    padding: 3rem;
+    /* Padding for box */
+    background: var(--white);
+    /* Background color for box */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    /* Box shadow */
+    border-radius: 1rem;
+    /* Border radius */
+    margin-bottom: 8rem;
+    /* Bottom margin for box */
+}
+
+.motivation .box-container .box:hover,
+.motivation .box-container .box:hover .icon {
+    background: var(--primary);
+    /* Background color on hover */
+}
+
+.motivation .box-container .box .icon {
+    width: 13rem;
+    /* Width for icon */
+    height: 13rem;
+    /* Height for icon */
+    line-height: 13rem;
+    /* Line height for icon */
+    background: var(--white);
+    /* Background color for icon */
+    border-radius: 50%;
+    /* Border radius for icon */
+    margin: -11rem auto 2rem;
+    /* Margin for icon */
+    border: 1.8rem solid var(--bg);
+    /* Border style for icon */
+}
+
+
+/* Increase size of the image in motivation section */
+
+.motivation .box-container .box .icon li img {
+    width: 100px;
+    max-height: 300px;
+    /* Adjust height as needed */
+    object-fit: cover;
+}
+
+.motivation .heading .box-container .box .icon img {
+    width: 500%;
+    max-height: 500px;
+    /* Adjust height as needed */
+    object-fit: cover;
+}
+
+.motivation .box-container .box .content h3 {
+    font-size: 2rem;
+    /* Font size for heading */
+    padding: 1rem 0;
+    /* Padding for heading */
+    color: var(--main-color);
+    /* Text color for heading */
+}
+
+.motivation .box-container .box .content .line {
+    background: var(--main-color);
+    /* Background color for line */
+    width: 30%;
+    /* Width for line */
+    height: .4rem;
+    /* Height for line */
+    margin: 2rem auto;
+    /* Margin for line */
+    border-radius: 5rem;
+    /* Border radius for line */
+}
+
+.motivation .box-container .box .content p {
+    font-size: 1.4rem;
+    /* Font size for paragraph */
+    color: var(--black);
+    /* Text color for paragraph */
+    line-height: 2;
+    /* Line height for paragraph */
+}
+
+.motivation .box-container .box .content ul {
+    margin: 2rem 0;
+    /* Margin for list */
+    list-style: none;
+    /* Remove list style */
+}
+
+.motivation .box-container .box .content ul li {
+    padding: 1.4rem 0;
+    /* Padding for list items */
+    color: var(--black);
+    /* Text color for list items */
+    display: flex;
+    align-items: center;
+    /* Center align items */
+}
+
+.motivation .box-container .box .content ul li img {
+    margin-right: 1rem;
+    /* Right margin for images */
+    width: 20px;
+    /* Image width */
+}
+
+.motivation .box-container .box .content ul li span {
+    font-size: 1.4rem;
+    /* Font size for list items */
+    color: var(--light-black);
+    /* Text color for list items */
+    line-height: 1.6;
+    /* Line height for list items */
+}
+
+
+/* Diet Section Styles */
+
+.diet .controls {
+    display: grid;
+    /* Grid display */
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    /* Grid columns */
+    gap: 1.5rem;
+    /* Gap between items */
+    list-style: none;
+    /* Remove list style */
+}
+
+.diet .controls .buttons {
+    padding: 3rem 2rem;
+    /* Padding for buttons */
+    background: var(--white);
+    /* Background color for buttons */
+    cursor: pointer;
+    /* Cursor style */
+    margin-bottom: 3rem;
+    /* Bottom margin for buttons */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    /* Box shadow */
+    text-align: center;
+    /* Center align text */
+    border-radius: 1rem;
+    /* Border radius */
+}
+
+.diet .controls .buttons img {
+    height: 6rem;
+    /* Height for button images */
+}
+
+.diet .controls .buttons h3 {
+    font-size: 1.7rem;
+    /* Font size for button headings */
+    padding-top: 1rem;
+    /* Top padding for button headings */
+    color: var(--light-black);
+    /* Text color for button headings */
+}
+
+.diet .controls .buttons.active {
+    background: var(--primary);
+    /* Background color for active buttons */
+}
+
+.diet .image-container {
+    display: grid;
+    /* Grid display */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    /* Grid columns */
+    gap: 2rem;
+    /* Gap between items */
+}
+
+.diet .image-container .box {
+    background: var(--white);
+    /* Background color for box */
+    border-radius: 2rem;
+    /* Border radius for box */
+    box-shadow: 0 .5rem rgba(0, 0, 0, 0.1);
+    /* Box shadow */
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+.diet .image-container .box:hover .image img {
+    transform: scale(1.1);
+    /* Scale image on hover */
+}
+
+.diet .image-container .box .image {
+    height: 25rem;
+    /* Height for image */
+    overflow: hidden;
+    /* Hide overflow */
+    width: 100%;
+    /* Width for image */
+}
+
+.diet .image-container .box .image img {
+    height: 100%;
+    /* Height for image */
+    width: 100%;
+    /* Width for image */
+    object-fit: cover;
+    /* Ensure image covers specified dimensions */
+}
+
+.diet .image-container .box .content {
+    padding: 2rem;
+    /* Padding for content */
+}
+
+.diet .image-container .box .content .link {
+    font-size: 2rem;
+    /* Font size for links */
+    color: var(--main-color);
+    /* Text color for links */
+}
+
+.diet .image-container .box .content p {
+    padding: 1rem 0;
+    /* Padding for paragraph */
+    font-size: 1.4rem;
+    /* Font size for paragraph */
+    color: var(--light-black);
+    /* Text color for paragraph */
+    line-height: 2;
+    /* Line height for paragraph */
+}
+
+.diet .image-container .box .content .icon {
+    padding-top: 1rem;
+    /* Top padding for icon */
+    display: flex;
+    /* Flex display */
+    align-items: center;
+    /* Align items */
+    justify-content: space-between;
+    /* Space between items */
+}
+
+.diet .image-container .box .content .icon a {
+    font-size: 1.4rem;
+    /* Font size for icon links */
+    color: var(--light-black);
+    /* Text color for icon links */
+}
+
+.diet .image-container .box .content .icon a:hover {
+    color: var(--main-color);
+    /* Text color on hover for icon links */
+}
+
+.diet .image-container .box .content .icon a i {
+    padding-right: .5rem;
+    /* Right padding for icon links */
+    color: var(--main-color);
+    /* Text color for icon links */
+}
+
+
+/* Footer Styles */
+
+footer {
+    background-color: #f8f9fa;
+    /* Background color for footer */
+    padding: 20px;
+    /* Padding for footer */
+    text-align: center;
+    /* Center align text */
+}
+
+.contact {
+    margin-bottom: 20px;
+    /* Bottom margin for contact section */
+}
+
+.contact h3 {
+    font-size: 1.5em;
+    /* Font size for heading */
+    margin-bottom: 10px;
+    /* Bottom margin for heading */
+}
+
+
+/* Social Links Styles */
+
+.social-links {
+    display: flex;
+    /* Flex display */
+    justify-content: center;
+    /* Center justify content */
+    gap: 20px;
+    /* Gap between items */
+}
+
+.social-links a {
+    display: inline-block;
+    /* Display as inline block */
+}
+
+.social-links img {
+    width: 100px;
+    /* Width for social links images */
+    height: 100px;
+    /* Height for social links images */
+    object-fit: cover;
+    /* Ensure image covers specified dimensions */
+    border-radius: 50%;
+    /* Border radius for images */
+    border: 2px solid #007bff;
+    /* Border style */
+    transition: border-color 0.3s ease;
+    /* Transition for border color */
+}
+
+.social-links img:hover {
+    border-color: #0056b3;
+    /* Border color on hover */
+}
+
+
+/* Meal Planner Section Styles */
+
+.meal-planner {
+    max-width: 800px;
+    /* Maximum width for meal planner section */
+    margin: 0 auto;
+    /* Margin for centering */
+    padding: 20px;
+    /* Padding for meal planner */
+    background-color: #f9f9f9;
+    /* Background color for meal planner */
+    border-radius: 10px;
+    /* Border radius for meal planner */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Box shadow */
+}
+
+.meal-planner .heading {
+    text-align: center;
+    /* Center align heading */
+    margin-bottom: 20px;
+    /* Bottom margin for heading */
+}
+
+
+/* Table Styles */
+
+table {
+    width: 100%;
+    /* Table width */
+    border-collapse: collapse;
+    /* Collapse table borders */
+    margin-bottom: 20px;
+    /* Bottom margin for table */
+}
+
+table td,
+table th {
+    padding: 10px;
+    /* Padding for table cells */
+    border: 1px solid #ddd;
+    /* Border style for table cells */
+    text-align: center;
+    /* Center align text */
+}
+
+
+/* Input Styles */
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    /* Width for text input */
+    padding: 5px;
+    /* Padding for text input */
+    margin-bottom: 10px;
+    /* Bottom margin for text input */
+}
+
+
+/* Button Styles */
+
+button {
+    padding: 2%;
+    /* Padding for button */
+    width: 100px;
+    /* Width for button */
+    background-color: var(--main-color);
+    /* Background color for button */
+    color: #000;
+    /* Text color for button */
+    border: none;
+    /* Remove button border */
+    border-radius: 5px;
+    /* Border radius for button */
+    cursor: pointer;
+    /* Cursor style */
+}
+
+
+/* Delete Icon Styles */
+
+.delete-icon {
+    color: #dc3545;
+    /* Color for delete icon */
+    cursor: pointer;
+    /* Cursor style */
+}
+
+.delete-icon:hover {
+    color: #bd2130;
+    /* Color on hover for delete icon */
+}
+
+
+/* Planner Form Styles */
+
+.planner-form {
+    display: flex;
+    /* Flex display */
+    padding: 20px 0px 40px 0px;
+    /* Padding for planner form */
+    justify-content: center;
+    /* Center justify content */
+}
+
+
+/* Form Styles */
+
+.form {
+    display: flex;
+    /* Flex display */
+    justify-content: center;
+    /* Center justify content */
+    align-items: center;
+    /* Align items */
+    gap: 10px;
+    /* Gap between items */
+    border-radius: 5px;
+    /* Border radius for form */
+    background-color: whitesmoke;
+    /* Background color for form */
+    padding: 10px;
+    /* Padding for form */
+}
+
+select {
+    padding: 2%;
+    /* Padding for select */
+    width: 150px;
+    /* Width for select */
+    border-radius: 5px;
+    /* Border radius for select */
+}
+
+input[type=text] {
+    margin: 0%;
+    /* Margin for text input */
+    padding: 2%;
+    /* Padding for text input */
+    width: 250px;
+    /* Width for text input */
+}
